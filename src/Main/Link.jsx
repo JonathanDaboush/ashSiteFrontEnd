@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+//component to declare value if link is clicked.
 function Link(props){
     let[id,setId]=useState(props.id);
     let[value,setValue]=useState(props.value);

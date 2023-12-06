@@ -3,7 +3,7 @@ import axios from 'axios';
 import JSOG from "jsog";
 import { Person } from "../Models/Person";
 import PersonMenu from "../Menus/PersonMenu";
-
+//container for people objects.
 function PersonContainer(props){
     const [persons, setPersons] = useState([]);
     const [name, setName] = useState("");
@@ -15,6 +15,7 @@ function PersonContainer(props){
     const [isTrue, setIsTrue] = useState(false);
     const [recycle , setRecycle] = useState(false);
     let [newObject,setNewObject]=useState(false);
+    //refresh to get all objects shown on read mode default setting.
     let refresh=()=>{
         setPersons([]);
         setName("");
@@ -27,7 +28,7 @@ function PersonContainer(props){
         setIsTrue(false);
         getData();
         props.setTarget(-1);
-    }
+    } //to filter container objects based on menu criteria and all objects matching them.
     const filter = (name, keywords) => {
         const newPersons = persons.filter((person) => {
             const nameCondition = name.trim() === '' || person.name.toLowerCase().includes(name.toLowerCase());
@@ -42,7 +43,7 @@ function PersonContainer(props){
         setPersonQue(newPersons);
     };
     
-    
+    //to filter container objects based on menu criteria and all objects matching them.
     const Filtering = (e) => {
         props.setTarget(-1);
         setNewObject(false);
@@ -56,7 +57,7 @@ function PersonContainer(props){
     
         filter(e.name, e.keywords);
     };
-
+ //to set up new adjusted list of objects.
     const targetLaunch = (e) => {
         setPersons([]);    
         const newPersons = [];   

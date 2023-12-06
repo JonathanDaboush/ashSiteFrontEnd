@@ -1,9 +1,10 @@
 import React, { useEffect,useState } from "react";
-
+//to autosuggest people names based on input and names of those registered under people.
 let AutoSuggest = (props) => {
   let [inputValue, setInputValue] = useState("");
   let [filteredSuggestions, setFilteredSuggestions] = useState([]);
   let [list,setList]=useState([]);
+  //to filter and set new list.
   let goThroughList = () => {
     let newList = [];
     props.oldSuggestions.forEach((person) => {
@@ -15,7 +16,7 @@ let AutoSuggest = (props) => {
     useEffect(() => {
         goThroughList();
     }, [props.oldSuggestions]);
-
+//to change suggestion boxes based on new input.
   let handleInputChange = (event) => {
     let input = event.target.value;
     setInputValue(input);
@@ -25,7 +26,7 @@ let AutoSuggest = (props) => {
     );
     setFilteredSuggestions(filtered);
   };
-
+//to save said list to parent.
   let handleSuggestionClick = (suggestion) => {
     setInputValue(suggestion);
     setFilteredSuggestions([]);
@@ -34,6 +35,7 @@ let AutoSuggest = (props) => {
     if(!newList.includes(suggestion)){newList.push(suggestion);}
     setList(newList);
   };
+  //to delete item saved in list of agreed upon people.
     let del=(name)=>{
         let newList=list.filter((item)=>item!=name);
         setList(newList);

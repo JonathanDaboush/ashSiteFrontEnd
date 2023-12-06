@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom/client';
 import Image from "../Models/Image";
-
+//image slider.
 function ImageSlider(props){
   let [images, setImages] = useState(props.images);
   let [counter,setCounter]=useState(0);
   let [fImage,setFImage]=useState([]);
 let [newImage,setNewImage]=useState(false);
-
+//to move main image to correct image index based on array button or image click.
   const focusSlides = () => {
    let updatedImage = props.images;
     if(updatedImage==undefined){
@@ -39,7 +39,7 @@ let [newImage,setNewImage]=useState(false);
       }
   }, [props.images, counter]);
   
-
+//delete image by index.
   let deleteImage = async (number) => {
     if(number!=0){
     if(counter===number ){setCounter(number-1)}
@@ -55,7 +55,7 @@ let [newImage,setNewImage]=useState(false);
     setImages(newImages);
     props.save(newImages);}
   };
-
+//add image to list.
   let saveImage = (image, description, name) => {
 
     
@@ -66,7 +66,7 @@ let [newImage,setNewImage]=useState(false);
       focusSlides();
     };
 
-      
+    //to move slider via arrows or image buttons.  
   let step=(value)=>{
       if(value<images.length && value>=0){
         setCounter(value);

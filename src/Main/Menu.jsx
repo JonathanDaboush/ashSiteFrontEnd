@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-
+//menu to change category of objects to see.
 function Menu(props) {
   const [category, setCategory] = useState("Person");
-
+//to change category.
   const changeCategory = (target) => {
     setCategory(target);
    

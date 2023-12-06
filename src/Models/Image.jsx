@@ -108,7 +108,7 @@ return (
       {props.title ?  
         <img src={`data:image/jpeg;base64,${image}`} alt={name} style={{ height: '60vh', width: '90%', display: 'flex', justifyContent: 'flex-start' }} /> 
   :
-  <img src={`data:image/jpeg;base64,${image}`} alt={name} /> 
+  <img src={`data:image/jpeg;base64,${image}`} alt={name} style={{height:'80vh'}}/> 
 }
 
     </div>

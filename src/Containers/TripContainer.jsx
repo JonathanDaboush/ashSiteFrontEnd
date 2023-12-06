@@ -12,6 +12,7 @@ function TripContainer(props){
     let [isTrue, setIsTrue] = useState(true);
     const [recycle , setRecycle] = useState(false);
 
+   //to filter container objects based on menu criteria and all objects matching them.
    
     const Filtering = (e) => {
         
@@ -46,7 +47,7 @@ function TripContainer(props){
     };
     
     
-
+ //to set up new adjusted list of objects.
     let targetLaunch = (e) => {
             
         let newTrip = [];   
@@ -58,7 +59,7 @@ function TripContainer(props){
         setTripQue(newTrip);
         props.setTarget(e);
     }
-
+//to set up new adjusted list of objects.
     let getData = async () => {if(newObject){setNewObject(false);return;} setRecycle(false); setEdit(false);
         setIsTrue(prevIsTrue => false); // Trigger a state change to re-render
         
@@ -90,7 +91,7 @@ let toEdit =()=>{
         setIsTrue(false);
     }}
 
-}
+}  //refresh to get all objects shown on read mode default setting.
     let refresh=()=>{
         setTrip([]);
         setTripQue([]);

@@ -9,12 +9,13 @@ import ConferenceContainer from "../Containers/ConferenceContainer";
 import PodCastContainer from "../Containers/PodCastContainer";
 import TripContainer from "../Containers/TripContainer";
 import AboutMe from "../Models/AboutMe"
-
+//main component to navigate components based on desired object.
 function Main(props) {
   let [category, setCategory] = useState("Person");
   let [id,setId]=useState(-1);
   let [count,setCount]=useState(0);
 let [people,setPeople]=useState([]);
+//to change category change.
   let handleCategoryChange = (e) => {
    
     if(e.category===undefined){
@@ -35,7 +36,7 @@ let [people,setPeople]=useState([]);
       }
       
   };
-
+//update people if new person is created via persons category.
 let peopleUpdate=(e)=>{
   setPeople(e);
 }
@@ -57,7 +58,7 @@ let peopleUpdate=(e)=>{
           flex: 1, // Allow the child container to expand and fill the available space
           display: "flex",
           flexDirection: "column",
-        }}>
+        }} className="p-3">
 
 
         {category === "Person" && <PersonContainer id={id} count={count} peopleUpdate={(e)=>peopleUpdate(e)}  setTarget={(e)=>setId(e)}/>}

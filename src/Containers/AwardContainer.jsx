@@ -3,7 +3,7 @@ import axios from 'axios';
 import JSOG from "jsog";
 import { Award } from "../Models/Award";
 import AwardMenu from "../Menus/AwardMenu";
-
+//container for awards
 function AwardContainer(props){
     let [award, setAward] = useState([]);
     let [awardQue, setAwardQue] = useState([]);
@@ -11,7 +11,7 @@ function AwardContainer(props){
     let [counter, setCounter] = useState(0);
     let [isTrue, setIsTrue] = useState(true);let [newObject,setNewObject]=useState(false);
     const [recycle , setRecycle] = useState(false);
-
+//to filter container objects based on menu criteria and all objects matching them.
    
     const Filtering = (e) => {
         
@@ -38,7 +38,7 @@ function AwardContainer(props){
         props.setTarget(-1);
     };
     
-
+//to update on possible list of awards to view.
     let targetLaunch = (e) => {
             
         let newAward = [];   
@@ -50,7 +50,7 @@ function AwardContainer(props){
         setAwardQue(newAward);
         props.setTarget(e);
     }
-
+//to get all award objects.
     let getData = async () => {if(newObject){setNewObject(false);return;}setRecycle(false); setEdit(false);
         let path = 'http://localhost:8080/award/all';
         try {
@@ -71,7 +71,9 @@ function AwardContainer(props){
         setNewObject(true);
         setEdit(true);setIsTrue(true);props.setTarget(-1);
     }
+    //to switch on and off of edit mode.
     let toEdit =()=>{if(!isTrue)setEdit(!edit);}
+    //refresh to get all objects shown on read mode default setting.
     let refresh=()=>{
         setAward([]);
         setAwardQue([]);

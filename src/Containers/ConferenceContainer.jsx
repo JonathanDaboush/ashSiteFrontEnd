@@ -3,7 +3,7 @@ import axios from 'axios';
 import JSOG from "jsog";
 import { Conference } from "../Models/Conference";
 import ConferenceMenu from "../Menus/ConferenceMenu";
-
+// container for conferences.
 function ConferenceContainer(props){
     let [conference, setConference] = useState([]);
     let [conferenceQue, setConferenceQue] = useState([]);
@@ -13,7 +13,7 @@ function ConferenceContainer(props){
 let [find,setFind] = useState(false);
     const [recycle , setRecycle] = useState(false);
 
-   
+   //to filter container objects based on menu criteria and all objects matching them.
     const Filtering = (e) => {
         setFind(true);
     
@@ -65,7 +65,7 @@ let [find,setFind] = useState(false);
     };
     
     
-
+//to set up new conference list as possible objects to see.
     let targetLaunch = (e) => {
             
         let newConference = [];   
@@ -77,7 +77,7 @@ let [find,setFind] = useState(false);
         setConferenceQue(newConference);
         props.setTarget(e);
     }
-
+//to get all conference objects.
     let getData = async () => {setRecycle(false); setEdit(false);
         let path = 'http://localhost:8080/conference/all';
         try {
@@ -98,12 +98,13 @@ let [find,setFind] = useState(false);
         setNewObject(true);
         setEdit(true);setIsTrue(true);props.setTarget(-1);
     }
+    //to switch on and off to edit mode.
     let toEdit = () => {
         if (!isTrue) {
           setEdit((prevEdit) => !prevEdit);
         }
       };
-      
+       //refresh to get all objects shown on read mode default setting.
     let refresh=()=>{
         setConference([]);
         setConferenceQue([]);

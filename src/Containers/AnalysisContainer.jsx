@@ -3,7 +3,7 @@ import axios from 'axios';
 import JSOG from "jsog";
 import { Analysis } from "../Models/Analysis";
 import AnalysisMenu from "../Menus/AnalysisMenu";
-
+//container for analysis objects.
 function AnalysisContainer(props){
     let [analysis, setAnalysis] = useState([]);
     let [analysisQue, setAnalysisQue] = useState([]);
@@ -12,7 +12,7 @@ function AnalysisContainer(props){
     let [isTrue, setIsTrue] = useState(false);
     const [recycle , setRecycle] = useState(false);
     let [newObject,setNewObject]=useState(false);
-   
+   //to filter container objects based on menu criteria and al objects matching them.
     const Filtering =  (e) => {
         props.setTarget(-1);
         setRecycle(true);
@@ -48,7 +48,7 @@ function AnalysisContainer(props){
         setAnalysisQue(newAnalysis);
         props.setTarget(e);
     }
-
+//to get analysis objects.
     let getData = async () => {
         
         if(newObject){setNewObject(false);return;}
@@ -75,8 +75,9 @@ function AnalysisContainer(props){
         setNewObject(true);
         setEdit(true);setIsTrue(true);
     }
+    //to switch on off to edit mode.
 let toEdit =()=>{if(!isTrue)setEdit(!edit);}
-
+ //refresh to get all objects shown on read mode default setting.
     let refresh=()=>{
         setAnalysis([]);
         setAnalysisQue([]);

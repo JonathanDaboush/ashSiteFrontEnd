@@ -12,6 +12,7 @@ function PodCastContainer(props){
     let [isTrue, setIsTrue] = useState(true);
     const [recycle , setRecycle] = useState(false);
 
+   //to filter container objects based on menu criteria and all objects matching them.
    
     const Filtering = (e) => {
         
@@ -35,7 +36,8 @@ function PodCastContainer(props){
         props.setTarget(-1);
     };
     
-
+  //to set up new adjusted list of objects.
+   
     let targetLaunch = (e) => {
             
         let newPodCast = [];   
@@ -47,7 +49,7 @@ function PodCastContainer(props){
         setPodCastQue(newPodCast);
         props.setTarget(e);
     }
-
+//to set up new adjusted list of objects.
     let getData = async () => {if(newObject){setNewObject(false);return;} setRecycle(false); setEdit(false);
         setIsTrue(prevIsTrue => false);
         let path = 'http://localhost:8080/podcast/all';
@@ -68,7 +70,7 @@ function PodCastContainer(props){
         setNewObject(true);
         setEdit(true);setIsTrue(true);props.setTarget(-1);
     }
-    let toEdit =()=>{if(!isTrue)setEdit(!edit);}
+    let toEdit =()=>{if(!isTrue)setEdit(!edit);}  //refresh to get all objects shown on read mode default setting.
     let refresh=()=>{
         setPodCast([]);
         setPodCastQue([]);

@@ -9,7 +9,7 @@ function PersonInserter(props) {
     useEffect(() => {
         getInitNames();
     }, []);
-  
+  //get list of all people from parent.
 let getInitNames=()=>{
     let newNames=[];
     for(let person of props.oldSuggestions){
@@ -23,7 +23,7 @@ let getInitNames=()=>{
         }
     }
     setPeople(newPeople);
-}
+} //go through list of people and find people objects of whom name match.
     let getPeople = (e) => {
         let newPeople=[];
         for(let person of props.people){
@@ -34,10 +34,12 @@ let getInitNames=()=>{
         setPeople(newPeople);
         props.updatePeople(newPeople);
     };
+    //to update the list
     let updateList=async(e)=>{
         setNames(e);
         getPeople(e)
     }
+    // to delete said entry by index. from child component delivering index.
     let del = (i) => {
         return () => {
             let newPeople = [...people];

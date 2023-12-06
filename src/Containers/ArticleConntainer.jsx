@@ -3,7 +3,7 @@ import axios from 'axios';
 import JSOG from "jsog";
 import { Article } from "../Models/Article";
 import ArticleMenu from "../Menus/ArticleMenu";
-
+// container for article objects.
 function ArticleContainer(props){
     let [article, setArticle] = useState([]);
     let [articleQue, setArticleQue] = useState([]);
@@ -13,7 +13,7 @@ function ArticleContainer(props){
     let [newObject,setNewObject]=useState(false);
     const [recycle , setRecycle] = useState(false);
 
-   
+   //to filter container objects based on menu criteria and all objects matching them.
     const Filtering = (e) => {
         props.setTarget(-1); 
    
@@ -39,7 +39,7 @@ function ArticleContainer(props){
         
     };
     
-
+//to adjust article objects to newly filtered list.
     let targetLaunch = (e) => {
             
         let newArticle = [];   
@@ -51,7 +51,7 @@ function ArticleContainer(props){
         setArticleQue(newArticle);
         props.setTarget(e);
     }
-
+//get all articles
     let getData = async () => {
         if(newObject){setNewObject(false);return;}
         setRecycle(false);  setEdit(false);
@@ -74,8 +74,9 @@ function ArticleContainer(props){
         setNewObject(true);
         setEdit(true);
         setIsTrue(true);
-    }
+    }// switch back and forth between edit
     let toEdit =()=>{if(!isTrue)setEdit(!edit);}
+    //refresh to get all objects shown on read mode default setting.
     let refresh=()=>{
         setArticle([]);
         setArticleQue([]);
