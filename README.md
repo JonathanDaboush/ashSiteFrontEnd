@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Ashok Dutta Project - Front-End React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+Welcome to the front-end React side of the Ashok Dutta project! This project is dedicated to showcasing various aspects of the journalist Ashok Dutta's career. The front-end is designed to provide a user-friendly interface for applying CRUD operations on different elements related to his professional journey.
 
-## Available Scripts
+## Features
+- **CRUD Functionality:** Users with appropriate privileges can seamlessly apply CRUD operations to manage various aspects of Ashok Dutta's career.
+- **Access Control:** Users without admin privileges are limited to read-only access, ensuring data integrity. Users with a valid token provided by Amazon gain the ability to edit the site.
 
-In the project directory, you can run:
+## Purpose
+This project serves as a comprehensive business card for Ashok Dutta, offering a dynamic platform to highlight his achievements. The site encompasses a wide range of elements, including awards, conference details, and articles associated with his prolific career.
 
-### `npm start`
+## Usage Guidelines
+1. **Read-Only Access:**
+   - Users without admin privileges can explore the site and view information related to Ashok Dutta's career.
+   
+2. **Editing Access:**
+   - Users with a valid token provided by Amazon can make edits to the site, contributing to the dynamic nature of the content.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
+To begin exploring and contributing to the Ashok Dutta project, follow these steps:
+1. Clone the repository to your local machine.
+2. Install the necessary dependencies using `npm install`.
+3. Access the application using your preferred development environment.
+4. Explore the various sections related to awards, conferences, and articles.
+5. If you have editing privileges, use your Amazon-provided token to make updates.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contributions
+We welcome contributions and suggestions to enhance the Ashok Dutta project. Feel free to submit pull requests or report issues to help us improve and maintain the project.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for being a part of the Ashok Dutta project!
