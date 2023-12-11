@@ -2,7 +2,7 @@
 
 ## Introduction
 Welcome to the front-end React side of the Ashok Dutta project! This project is dedicated to showcasing various aspects of the journalist Ashok Dutta's career. The front-end is designed to provide a user-friendly interface for applying CRUD operations on different elements related to his professional journey.
-please upon downloading use npm i and then npm update.
+please upon downloading use npm i and then npm update.Note I used port 3000.
 ## Features
 - **CRUD Functionality:** Users with appropriate privileges can seamlessly apply CRUD operations to manage various aspects of Ashok Dutta's career.
 - **Access Control:** Users without admin privileges are limited to read-only access, ensuring data integrity. Users with a valid token provided by Amazon gain the ability to edit the site.
