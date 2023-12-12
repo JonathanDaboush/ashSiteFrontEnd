@@ -1,4 +1,10 @@
 # Ashok Dutta Project - Front-End React
+note: to add instalation use npm install npm update.
+. you will need this to run the app at ../ashSiteFrontEnd !!!
+to run use npm start.
+## to improve
+
+I wanted to add an authorization system to allow those authorized to be able to edit and create users. system is by default in read mode so unauthorized users just wont be able to see those buttons to create new object or switch edit mode once an object is selected. To see the edit button you must create an object in any category and it will be above. the only reason i could not do this myself was because i needed a token system from deployment to be what decides who is authorized and who can be authorized. a log in system would work too. to do this you could just add a password field one which is not available to see or edit anywhere but person.do to using a grid system it should be easy to make dependent classes to make the width of search button 100% as im using bootstrap. Also for the client he wants minimum costs so please use a serverless architecture. Note I used port 3000 for front end.
 
 ## Introduction
 Welcome to the front-end React side of the Ashok Dutta project! This project is dedicated to showcasing various aspects of the journalist Ashok Dutta's career. The front-end is designed to provide a user-friendly interface for applying CRUD operations on different elements related to his professional journey.
